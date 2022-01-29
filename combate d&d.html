@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Combate D&D</title>
+  <link rel="stylesheet" href="combate.css" />
+</head>
+
+<body style="background-color: rgb(0, 0, 0)">
+
+  <img style="padding: 20px;" src="E:\Jogos\D&D\Dungeons_&_Dragons_5th_Edition_logo.png" width="20%">
+
+  <div name="turnos" class="turno">
+    <h2 id="turno" style="margin-top: 5px; margin-left: 20px;">Turno 1</h2>
+    <button class="botao" name="adcionarTurno" onclick="adicionarTurno()">
+      Adicionar Turno
+    </button>
+  </div>
+
+  <div class="app">
+
+    <div id="iniciativa" class="div">
+      <h2>Iniciativa</h2>
+
+      <div id="personagem" class="div">
+        <label>
+          <input type="text"/><input type="number"/>
+        </label>
+        <button name='adicionarPersonagem' onclick="adicionarPersonagem()">
+          Adicionar Personagem</button>
+        <br>
+
+      </div>
+
+      <div id="inimigo" class="div">
+        <label>
+          <input type="text"><input type="number">
+        </label>
+
+        <button style="margin-left: 10px" name="adcionarInimigo" onclick="adicionarInimigo()">
+          Adicionar Inimigo
+        </button><br />
+      </div>
+
+    </div>
+
+    <div class="div2">
+      <h2 style="margin-left: 20px">Contagem de Danos</h2>
+      <table border="1">
+        <tbody>
+          <tr>
+            <th>Inimigo</th>
+            <th>Dano Sofrido</th>
+            <th>Dano Total</th>
+          </tr>
+          <tr>
+            <td><input></td>
+            <td><input id="danoSofrido" type="number"></td>
+            <td><input id="danoTotal" type="number" value="0" disabled></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="div">
+    <h2>Anotações</h2>
+    <textarea name="anotacao" id="" cols="170" rows="10"></textarea>
+  </div>
+
+  <script src="combate.js"></script>
+</body>
+
+</html>
